@@ -29,9 +29,16 @@
 <div id='map'></div>
 
 <script type="text/javascript">
-  L.mapbox.accessToken = 'pk.eyJ1IjoiaWZlYXJjb21waWxlcmVycm9ycyIsImEiOiJjaXR6MXEwbHYwYjVnMnludnBuOGY0ZzNpIn0.Uhem8gvmgHnOhV55zvuYOQ';
-  // Create a map in the div #map
-  var map = L.mapbox.map('map', 'mapbox.streets').setView([37.23,-122], 10);
+L.mapbox.accessToken = 'pk.eyJ1IjoiaWZlYXJjb21waWxlcmVycm9ycyIsImEiOiJjaXR6MXEwbHYwYjVnMnludnBuOGY0ZzNpIn0.Uhem8gvmgHnOhV55zvuYOQ';
+// Create a map in the div #map
+var map = L.mapbox.map('map', 'mapbox.streets').setView([37.3,-121.9], 11);
+
+$.getJSON("Neighborhood_Organizations_region.geojson", function(data, error) {
+
+  if(error != "success") console.log(error);
+
+  var geojson = L.geoJson(data).addTo(map);
+});
 </script>
 
 </body>
