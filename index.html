@@ -4,11 +4,35 @@
 <head>
   <meta charset="utf-8">
   <title>SJ Neighborhood Association Map</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/queue.v1.min.js"></script>
+
+  <style>
+    body { margin:0; position:fixed; top:0; right:0; bottom:0; left:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+    #menu { position:fixed; z-index:1; bottom:0; right:0;
+            width:10em; height:10em; background-color:white;
+            border-radius: 2%; border:rgba(100,100,100,.75) solid 1px;
+            display:inline-block; line-height:1.5em;
+            margin:0 3em 5em 0; padding:.5em;}
+
+  </style>
+
 </head>
 
 <body>
 
+<div id='map'></div>
 
+<script type="text/javascript">
+  L.mapbox.accessToken = 'pk.eyJ1IjoiaWZlYXJjb21waWxlcmVycm9ycyIsImEiOiJjaXR6MXEwbHYwYjVnMnludnBuOGY0ZzNpIn0.Uhem8gvmgHnOhV55zvuYOQ';
+  // Create a map in the div #map
+  var map = L.mapbox.map('map', 'mapbox.streets').setView([37.23,-122], 10);
+</script>
 
 </body>
 </html>
