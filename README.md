@@ -8,4 +8,7 @@ Other (if the above method doesn't work):
 npm install http-server
 see: https://www.npmjs.com/package/http-server
 
+Addendum:
+Choose your favorite broswer (preferably Chrome) and visit 'localhost:8008'
+
 If you are unable to view the contact me at angeliqueajdecastro@gmail.com
